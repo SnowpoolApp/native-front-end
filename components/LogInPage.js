@@ -13,7 +13,7 @@ export default function LoginPage(){
                 console.log("pressed")
             }} title="Log in with Facebook" />
             <Text style={styles.text}
-      onPress={() => console.log('clicked')}>Why Facebook?</Text>
+      onPress={() => console.log('clicked!')}>Why Facebook?</Text>
             <Text style={styles.text}>We will never post anything without your explicit consent.</Text>
             <Text style={styles.text}>This is a demo application. By clicking on "Sign In" you agree to our Demo Terms.</Text>
             <Button title='Learn more' onPress={()=>console.log('pressed')} />
