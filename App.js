@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import LogInPage from "./components/LogInPage.js";
 import TestButton from "./components/TestButton.js";
 import UserAccountPage from "./components/UserAccountPage.js";
+import TripsSearchPage from "./components/TripsSearchPage.js";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -15,6 +16,7 @@ export default function App() {
       <Navigator initialRouteName="Home">
         <Screen name="Home" component={LogInPage} />
         <Screen name="Account Page" component={UserAccountPage} />
+        <Screen name="Trips" component={TripsSearchPage} />
       </Navigator>
       <StatusBar style="auto" />
       <TestButton name="Go to Form" />
