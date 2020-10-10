@@ -1,24 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import LogInPage from './components/LogInPage.js'
-import TestButton from './components/TestButton.js'
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import LogInPage from "./components/LogInPage.js";
+import TestButton from "./components/TestButton.js";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import UserAccountPage from "./components/UserAccountPage.js";
+
+const { Navigator, Screen } = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <LogInPage/>
+    <NavigationContainer>
+      <Navigator initialRouteName="Home">
+        <Screen name="Home" component={LogInPage} />
+        <Screen name="Account Page" component={UserAccountPage} />
+      </Navigator>
       <StatusBar style="auto" />
-      <TestButton name="Go to Form"/>
-    </View>
+      <TestButton name="Go to Form" />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
