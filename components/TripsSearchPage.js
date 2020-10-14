@@ -1,4 +1,5 @@
 import React from 'react'
+import data from "../trips-data"
 import { Text, View, StyleSheet } from "react-native";
 import { Button } from 'react-native-elements';
 
