@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
     titleContainer: {
       flex: 1,
       display: "flex",
-      margin: 10,
+      margin: 20,
+      marginTop: 100,
       marginLeft: 10,
       alignItems: "flex-start",
     },
