@@ -4,6 +4,13 @@ import { Text, View, StyleSheet, FlatList, SafeAreaView } from "react-native";
 import { Button, Divider } from "react-native-elements";
 
 const Separator = () => <View style={styles.separator} />;
+const Headers = () => (
+  <Text style={{ alignSelf: "center" }}>
+    Meet Up {"   "}
+    End Location {"   "}
+    Date/Time
+  </Text>
+);
 
 function TripsSearchPage() {
   return (
@@ -23,10 +30,11 @@ function TripsSearchPage() {
         {DATA ? (
           <FlatList
             data={DATA}
+            ListHeaderComponent={Headers}
             renderItem={({ item }) => {
               return (
                 <>
-                  <Text key={item.id} style={{alignSelf: "center"}}>
+                  <Text key={item.id} style={{ alignSelf: "center" }}>
                     {item.startLocation} {"   "}
                     {item.endLocation} {"   "}
                     {item.dateAndTime}
@@ -76,6 +84,7 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 2,
     alignSelf: "center",
+    marginBottom: 2
   },
 });
 
