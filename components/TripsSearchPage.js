@@ -3,9 +3,12 @@ import DATA from "../trips-data";
 import { Text, View, StyleSheet, FlatList, SafeAreaView } from "react-native";
 import { Button, Divider } from "react-native-elements";
 
+//Separator between title and trips
 const Separator = () => <View style={styles.separator} />;
+
+//"Table" headers for trips list
 const Headers = () => (
-  <Text style={{ alignSelf: "center" }}>
+  <Text style={{ alignSelf: "center", margin: 15 }}>
     Meet Up {"   "}
     End Location {"   "}
     Date/Time
@@ -15,7 +18,7 @@ const Headers = () => (
 function TripsSearchPage() {
   return (
     <>
-      <View style={styles.titleContainer}>
+      <SafeAreaView style={styles.titleContainer}>
         <Text style={styles.titleText}>Trips</Text>
         <Button
           type="outline"
@@ -23,7 +26,7 @@ function TripsSearchPage() {
           style={{alignSelf: "flex-start"}}
           //Touch will navigate to create trip page
         />
-      </View>
+      </SafeAreaView>
       <Text style={styles.filter}>Filter</Text>
       <Separator/>
       <SafeAreaView>
@@ -55,8 +58,6 @@ function TripsSearchPage() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flex: 1,
-    display: "flex",
     margin: 20,
     marginTop: 90,
     marginLeft: 10,
@@ -69,7 +70,6 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginVertical: 8,
-    marginBottom: 600,
     borderBottomColor: "#737373",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
