@@ -1,7 +1,7 @@
 import React from "react";
 import DATA from "../trips-data";
 import { Text, View, StyleSheet, FlatList, SafeAreaView } from "react-native";
-import { Button } from "react-native-elements";
+import { Button, Divider } from "react-native-elements";
 
 const Separator = () => <View style={styles.separator} />;
 
@@ -24,11 +24,14 @@ function TripsSearchPage() {
             data={DATA}
             renderItem={({ item }) => {
               return (
-                <Text key={item.id}>
-                  {item.startLocation}
-                  {item.endLocation}
-                  {item.dateAndTime}
-                </Text>
+                <>
+                  <Text key={item.id}>
+                    {item.startLocation}
+                    {item.endLocation}
+                    {item.dateAndTime}
+                  </Text>
+                  <Divider style={styles.divider}/>
+                </>
               );
             }}
           />
@@ -68,6 +71,11 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
     marginRight: 12,
   },
+  divider: {
+    width: "80%", 
+    height: 2,
+    alignSelf: "center"
+  }
 });
 
 export default TripsSearchPage;
