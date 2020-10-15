@@ -20,11 +20,12 @@ function TripsSearchPage() {
         <Button
           type="outline"
           title="Create Trip"
+          style={{alignSelf: "flex-start"}}
           //Touch will navigate to create trip page
         />
       </View>
       <Text style={styles.filter}>Filter</Text>
-      <Separator />
+      <Separator/>
       <SafeAreaView>
         {/* If there are trips, render list, else render message */}
         {DATA ? (
@@ -57,9 +58,8 @@ const styles = StyleSheet.create({
     flex: 1,
     display: "flex",
     margin: 20,
-    marginTop: 100,
+    marginTop: 90,
     marginLeft: 10,
-    alignItems: "flex-start",
   },
   titleText: {
     fontSize: 40,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginVertical: 8,
-    marginBottom: 640,
+    marginBottom: 600,
     borderBottomColor: "#737373",
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
