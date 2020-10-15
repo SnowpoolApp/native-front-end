@@ -8,7 +8,7 @@ const Separator = () => <View style={styles.separator} />;
 
 //"Table" headers for trips list
 const Headers = () => (
-  <Text style={{ alignSelf: "center", margin: 15 }}>
+  <Text style={styles.headers}>
     Meet Up {"   "}
     End Location {"   "}
     Date/Time
@@ -38,7 +38,7 @@ function TripsSearchPage() {
             renderItem={({ item }) => {
               return (
                 <>
-                  <Text key={item.id} style={{ alignSelf: "center" }}>
+                  <Text key={item.id} style={styles.listText}>
                     {item.startLocation} {"   "}
                     {item.endLocation} {"   "}
                     {item.dateAndTime}
@@ -62,11 +62,22 @@ const styles = StyleSheet.create({
     marginTop: 90,
     marginLeft: 10,
   },
+  headers: {
+    alignSelf: "center", 
+    margin: 15,
+    fontSize: 20,
+    fontWeight: "bold"
+  },
   titleText: {
     fontSize: 40,
     alignSelf: "auto",
     marginBottom: 10,
     // fontFamily: "Pacifico",
+  },
+  listText: {
+    alignSelf: "center",
+    fontSize: 15,
+    marginBottom: 7
   },
   separator: {
     marginVertical: 8,
@@ -84,7 +95,7 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 2,
     alignSelf: "center",
-    marginBottom: 2
+    marginBottom: 10
   },
 });
 
