@@ -19,18 +19,19 @@ function TripsSearchPage() {
       <Text style={styles.filter}>Filter</Text>
       <Separator />
       <SafeAreaView>
+        {/* If there are trips, render list, else render message */}
         {DATA ? (
           <FlatList
             data={DATA}
             renderItem={({ item }) => {
               return (
                 <>
-                  <Text key={item.id}>
-                    {item.startLocation}
-                    {item.endLocation}
+                  <Text key={item.id} style={{alignSelf: "center"}}>
+                    {item.startLocation} {"   "}
+                    {item.endLocation} {"   "}
                     {item.dateAndTime}
                   </Text>
-                  <Divider style={styles.divider}/>
+                  <Divider style={styles.divider} />
                 </>
               );
             }}
@@ -72,10 +73,10 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   divider: {
-    width: "80%", 
+    width: "80%",
     height: 2,
-    alignSelf: "center"
-  }
+    alignSelf: "center",
+  },
 });
 
 export default TripsSearchPage;
