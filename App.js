@@ -17,36 +17,36 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen
+      <Navigator initialRouteName="Home">
+        <Screen
           name="Home"
           component={LogInPage}
-          options={{
-            drawerIcon: ({ focused, size }) => <Ionicons name="md-snow" />,
-          }}
+          // options={{
+          //   drawerIcon: ({ focused, size }) => <Ionicons name="md-snow" />,
+          // }}
         />
-        <Drawer.Screen
+        <Screen
           name="Account Page"
           component={UserAccountPage}
-          options={{
-            drawerIcon: ({ focused, size }) => <Ionicons name="md-home" />,
-          }}
+          // options={{
+          //   drawerIcon: ({ focused, size }) => <Ionicons name="md-home" />,
+          // }}
         />
-        <Drawer.Screen
+        <Screen
           name="Trips"
           component={TripsSearchPage}
-          options={{
-            drawerIcon: ({ focused, size }) => <Ionicons name="md-car" />,
-          }}
+          // options={{
+          //   drawerIcon: ({ focused, size }) => <Ionicons name="md-car" />,
+          // }}
         />
-        <Drawer.Screen
+        <Screen
           name="Create Trip"
           component={TripCreationPage}
-          options={{
-            drawerIcon: ({ focused, size }) => <Ionicons name="md-create" />,
-          }}
+          // options={{
+          //   drawerIcon: ({ focused, size }) => <Ionicons name="md-create" />,
+          // }}
         />
-      </Drawer.Navigator>
+      </Navigator>
       <StatusBar style="auto" />
       <TestButton name="Go to Form" />
     </NavigationContainer>
