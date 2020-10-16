@@ -7,7 +7,7 @@ import Snowpool from "../assets/snowpool-background-min.jpg";
 
 export default function LoginPage({ navigation }) {
   return (
-    <Swiper style={styles.wrapper} showsButtons={true}>
+    <Swiper loop={false} style={styles.wrapper} showsButtons={true}>
     <ImageBackground source={Snowpool} style={styles.image}>
       <View style={styles.parent}>
       <View style={styles.horizontal} >
@@ -34,8 +34,40 @@ export default function LoginPage({ navigation }) {
       
     </ImageBackground>
     <View style={styles.slide2}>
-          <Text style={styles.title}>
+          <Text style={styles.header}>
+          Terms of Service (Demo)
+          </Text>
+          <Text>
+            Last modified: September 30, 2018
+          </Text>
+          <Text style={[styles.header, styles.subheader]} >
+            Welcome to Snowpool
+            </Text>
+            <Text>
+            This is a demo application of the open source carpooling platform Snowpool.
+
+            The source code is available at https://github.com/diowa/icare
+
+            </Text>
+          <Text style={[styles.header, styles.subheader]} >
+          Our Warranties and Disclaimers
+            </Text>
+            <Text>
             
+            WE PROVIDE THIS DEMO "AS IS", WITHOUT ANY WARRANTY.
+            </Text>
+          <Text style={[styles.header, styles.subheader]} >
+          Privacy policy
+            </Text>
+            <Text>
+            
+            We cache the following Facebook data on our local database for performance reasons:
+
+            Email, name, birthday, likes.
+            We do not store your public profile picture.
+            We will not send you any email.
+
+            You can permanently delete your data by logging in and clicking the "Delete account" button on the footer.
         </Text>
         </View>
         <View style={styles.slide3}>
@@ -56,6 +88,16 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 1)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10
+  },
+  header: {
+    color: "white",
+    fontSize: 25,
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
+  },
+  subheader: {
+    marginTop: 30,
   },
   parent: {
     display: 'flex',
@@ -112,8 +154,10 @@ const styles = StyleSheet.create({
   slide2: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#97CAE5'
+    backgroundColor: '#97CAE5',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 200,
   },
   slide3: {
     flex: 1,
