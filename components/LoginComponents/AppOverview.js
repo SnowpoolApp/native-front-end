@@ -1,15 +1,31 @@
 import React from "react";
-import { Text, View, StyleSheet, Button } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+import * as WebBrowser from 'expo-web-browser';
 
 
 export default function AppOverview({ navigation }) {
   return (
     <View style={styles.slide2}>
-      <View></View>
-      <View></View>
-      <View></View>
-      <View></View>
-      <View></View>
+        <View style={styles.child}>
+          <Text>Share rides</Text>
+          <Text>Check out upcoming trips to offer a ride or grab a ride.</Text>
+        </View>
+        <View style={styles.child}>
+          <Text>Ski with friends</Text>
+          <Text>The ride up is always more fun with friends. Pack your car with buddies old and new.</Text>
+        </View>
+        <View style={styles.child}>
+          <Text>You've got flexibility</Text>
+          <Text>Choose your resort, pick a time, and meet at convenient nearby locations.</Text>
+        </View>
+        <View style={styles.child}>
+          <Text>Reduce your carbon footprint</Text>
+          <Text>Fewer cars and less traffic will help us protect the snowpack and the sport we love!</Text>
+        </View>
+        <View style={styles.child}>
+            <Text>Open Source</Text>
+            <Text>The source code of Snowpool is available to everyone on <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://github.com/SnowpoolApp'))}>GitHub</Text>, the world's largest open source community.</Text>
+        </View>
     </View>
   );
 }
@@ -83,8 +99,15 @@ const styles = StyleSheet.create({
   },
   slide2: {
     display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     flex: 1,
     justifyContent: 'center',
     backgroundColor: 'white',
-  }
+  },
+  child: {
+    flexBasis: '20%',
+    borderColor: 'black',
+    borderWidth: 2
+  }, 
 });
