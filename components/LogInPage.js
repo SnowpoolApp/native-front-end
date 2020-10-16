@@ -1,13 +1,15 @@
 import React from "react";
 import { Text, View, StyleSheet, Button, ImageBackground } from "react-native";
-var Swiper = require('react-native-swiper')
-// var FBLoginButton = require('./FBLoginButton')
+var Swiper = require('react-native-swiper');
+import * as WebBrowser from 'expo-web-browser';
+
+// var FBLoginButton = require('./FBLoginButton.js')
 
 import Snowpool from "../assets/snowpool-background-min.jpg";
 
 export default function LoginPage({ navigation }) {
   return (
-    <Swiper loop={false} style={styles.wrapper} showsButtons={true}>
+    <Swiper loop={false} style={styles.wrapper} >
     <ImageBackground source={Snowpool} style={styles.image}>
       <View style={styles.parent}>
       <View style={styles.horizontal} >
@@ -20,16 +22,18 @@ export default function LoginPage({ navigation }) {
         title="Log in with Facebook"
         onPress={() => navigation.navigate("Account Page")}
       />
+      {/* <FBLoginButton /> */}
       <Text style={styles.link} onPress={() => console.log("clicked")}>
         Why Facebook?
       </Text>
       </View>
+      
       <Text style={styles.demo}>
         We will never post anything without your explicit consent.~{"\n"}
         This is a demo application. By clicking on "Sign In" you agree to our
         Demo Terms →
       </Text>
-      <Text style={styles.text}>↔ Swipe to learn more ↔</Text>
+      <Text style={styles.text}>Swipe to learn more →</Text>
       </View>
       
     </ImageBackground>
@@ -37,33 +41,33 @@ export default function LoginPage({ navigation }) {
           <Text style={styles.header}>
           Terms of Service (Demo)
           </Text>
-          <Text>
+          <Text style={styles.disclaimer}>
             Last modified: September 30, 2018
           </Text>
           <Text style={[styles.header, styles.subheader]} >
             Welcome to Snowpool
             </Text>
-            <Text>
-            This is a demo application of the open source carpooling platform Snowpool.
+            <Text style={styles.disclaimer}>
+            This is a demo application of the open source <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://en.wikipedia.org/wiki/Carpool'))}>carpooling</Text> platform Snowpool.
 
-            The source code is available at https://github.com/diowa/icare
+            The source code is available <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://github.com/diowa/icare'))}>here</Text>
 
             </Text>
           <Text style={[styles.header, styles.subheader]} >
           Our Warranties and Disclaimers
             </Text>
-            <Text>
+            <Text style={styles.disclaimer}>
             
             WE PROVIDE THIS DEMO "AS IS", WITHOUT ANY WARRANTY.
             </Text>
           <Text style={[styles.header, styles.subheader]} >
           Privacy policy
             </Text>
-            <Text>
+            <Text style={styles.disclaimer}>
             
-            We cache the following Facebook data on our local database for performance reasons:
+            We cache the following Facebook data on our local database for performance reasons:{'\n'}{'\n'}
 
-            Email, name, birthday, likes.
+            Email, name, birthday, likes.{'\n'}{'\n'}
             We do not store your public profile picture.
             We will not send you any email.
 
@@ -144,6 +148,11 @@ const styles = StyleSheet.create({
     textShadowRadius: 10,
     marginBottom: 200,
   },
+  disclaimer: {
+    padding: 5,
+    lineHeight: 25,
+    fontSize: 16
+  },
   wrapper: {},
   // slide1: {
   //   flex: 1,
@@ -155,9 +164,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#97CAE5',
+    paddingTop: 20,
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 200,
+    paddingBottom: 100,
   },
   slide3: {
     flex: 1,
