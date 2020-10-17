@@ -31,6 +31,10 @@ export default function LoginPage({ navigation }) {
         </Text>
         <Text style={styles.text}>Swipe to learn more →</Text>
       </View>
+      <Button 
+        title={"name"}
+        onPress={() => navigation.navigate('ShowTrip')}
+      />
     </ImageBackground>
   );
 }
