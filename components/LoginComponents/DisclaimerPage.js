@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import * as WebBrowser from 'expo-web-browser';
 
-export default function DisclaimerPage({ navigation }) {
+export default function DisclaimerPage() {
   return (
     <View style={styles.slide2}>
           <Text style={styles.header}>
