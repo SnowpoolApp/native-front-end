@@ -58,7 +58,7 @@ function TripsSearchPage() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    marginTop: 90,
+    marginTop: 40,
     marginLeft: 10,
   },
   headers: {
