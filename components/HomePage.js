@@ -9,8 +9,8 @@ export default function HomePage({ navigation }) {
   return (
     <Swiper loop={false}>
       <LoginPage navigation={navigation}/>
-      <DisclaimerPage />
       <AppOverview />
+      <DisclaimerPage />
     </Swiper>
   );
 }

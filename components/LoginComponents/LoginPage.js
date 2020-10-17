@@ -9,28 +9,27 @@ export default function LoginPage({ navigation }) {
   return (
     <ImageBackground source={Snowpool} style={styles.image}>
       <View style={styles.parent}>
-      <View style={styles.horizontal} >
-      <Text style={styles.title}>Snowpool</Text>
-      <Text style={styles.text}> demo</Text>
-      </View>
-      <Text style={styles.text}>Open Source Carpooling Platform</Text>
-      <View style={styles.horizontal}>
-      <Button color='#336bc4'
-        title="Log in with Facebook"
-        onPress={() => navigation.navigate("Account Page")}
-      />
-      {/* <FBLoginButton /> */}
-      <Text style={styles.link} onPress={() => console.log("clicked")}>
-        Why Facebook?
-      </Text>
-      </View>
-      
-      <Text style={styles.demo}>
-        We will never post anything without your explicit consent.~{"\n"}
-        This is a demo application. By clicking on "Sign In" you agree to our
-        Demo Terms →
-      </Text>
-      <Text style={styles.text}>Swipe to learn more →</Text>
+        <View style={styles.horizontal} >
+            <Text style={styles.title}>Snowpool</Text>
+            <Text style={styles.text}> demo</Text>
+        </View>
+        <Text style={styles.text}>Open Source Carpooling Platform</Text>
+        <View style={styles.horizontal}>
+            <Button color='#336bc4'
+                title="Log in with Facebook"
+                onPress={() => navigation.navigate("Account Page")}
+            />
+            {/* <FBLoginButton /> */}
+            <Text style={styles.link} onPress={() => console.log("clicked")}>
+                Why Facebook?
+            </Text>
+        </View>
+        <Text style={styles.demo}>
+            We will never post anything without your explicit consent.~{"\n"}
+            This is a demo application. By clicking on "Sign In" you agree to our
+            Demo Terms on slide 3 →
+        </Text>
+        <Text style={styles.text}>Swipe to learn more →</Text>
       </View>
     </ImageBackground>
   );

@@ -1,46 +1,48 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import * as WebBrowser from 'expo-web-browser';
+
+import Snow from "../../assets/snow-background.jpg";
 
 export default function DisclaimerPage() {
   return (
-    <View style={styles.slide2}>
-          <Text style={styles.header}>
-          Terms of Service (Demo)
-          </Text>
-          <Text style={styles.disclaimer}>
-            Last modified: September 30, 2018
-          </Text>
-          <Text style={[styles.header, styles.subheader]} >
-            Welcome to Snowpool
-            </Text>
-            <Text style={styles.disclaimer}>
-            This is a demo application of the open source <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://en.wikipedia.org/wiki/Carpool'))}>carpooling</Text> platform Snowpool.
-
-            The source code is available <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://github.com/diowa/icare'))}>here</Text>
-
-            </Text>
-          <Text style={[styles.header, styles.subheader]} >
-          Our Warranties and Disclaimers
-            </Text>
-            <Text style={styles.disclaimer}>
-            
-            WE PROVIDE THIS DEMO "AS IS", WITHOUT ANY WARRANTY.
-            </Text>
-          <Text style={[styles.header, styles.subheader]} >
-          Privacy policy
-            </Text>
-            <Text style={styles.disclaimer}>
-            
-            We cache the following Facebook data on our local database for performance reasons:{'\n'}{'\n'}
-
-            Email, name, birthday, likes.{'\n'}{'\n'}
-            We do not store your public profile picture.
-            We will not send you any email.
-
-            You can permanently delete your data by logging in and clicking the "Delete account" button on the footer.
+    <ImageBackground source={Snow} style={styles.slide2}>
+        <Text style={styles.header}>
+        Terms of Service (Demo)
         </Text>
-        </View>
+        <Text style={styles.disclaimer}>
+        Last modified: September 30, 2018
+        </Text>
+        <Text style={[styles.header, styles.subheader]} >
+        Welcome to Snowpool
+        </Text>
+        <Text style={styles.disclaimer}>
+        This is a demo application of the open source <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://en.wikipedia.org/wiki/Carpool'))}>carpooling</Text> platform Snowpool.
+
+        The source code is available <Text style={styles.link} onPress={() => (WebBrowser.openBrowserAsync('https://github.com/diowa/icare'))}>here</Text>
+
+        </Text>
+        <Text style={[styles.header, styles.subheader]} >
+        Our Warranties and Disclaimers
+        </Text>
+        <Text style={styles.disclaimer}>
+        
+        WE PROVIDE THIS DEMO "AS IS", WITHOUT ANY WARRANTY.
+        </Text>
+        <Text style={[styles.header, styles.subheader]} >
+        Privacy policy
+        </Text>
+        <Text style={styles.disclaimer}>
+        
+        We cache the following Facebook data on our local database for performance reasons:{'\n'}{'\n'}
+
+        Email, name, birthday, likes.{'\n'}{'\n'}
+        We do not store your public profile picture.
+        We will not send you any email.
+
+        You can permanently delete your data by logging in and clicking the "Delete account" button on the footer.
+        </Text>
+    </ImageBackground>
   );
 }
 
@@ -63,7 +65,6 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
     margin: 5
-    // fontFamily: 'Pacifico'
   },
   link: {
     color: "white",
@@ -73,7 +74,6 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
     margin: 5
-    // fontFamily: 'Pacifico'
   },
   disclaimer: {
     padding: 5,
