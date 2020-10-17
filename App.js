@@ -8,6 +8,7 @@ import TestButton from "./components/TestButton.js";
 import UserAccountPage from "./components/UserAccountPage.js";
 import TripsSearchPage from "./components/TripsSearchPage.js";
 import TripCreationPage from "./components/TripCreationPage.js";
+import TripShowPage from "./components/TripShowPage.js"
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -46,9 +47,15 @@ export default function App() {
           //   drawerIcon: ({ focused, size }) => <Ionicons name="md-create" />,
           // }}
         />
+        <Screen
+          name="ShowTrip"
+          component={TripShowPage}
+          // options={{
+          //   drawerIcon: ({ focused, size }) => <Ionicons name="md-create" />,
+          // }}
+        />
       </Navigator>
       <StatusBar style="auto" />
-      <TestButton name="Go to Form" />
     </NavigationContainer>
   );
 }
