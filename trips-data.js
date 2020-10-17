@@ -18,7 +18,7 @@ const DATA = [
     dateAndTime: "10/22/2020, 5:00pm",
     description: "Description 1",
     pets: true,
-    roundTrip: true
+    roundTrip: true,
     cost: 100
   },
 ];
