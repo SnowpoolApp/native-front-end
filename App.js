@@ -4,7 +4,6 @@ import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomePage from "./components/HomePage.js";
-import TestButton from "./components/TestButton.js";
 import UserAccountPage from "./components/UserAccountPage.js";
 import TripsSearchPage from "./components/TripsSearchPage.js";
 import TripCreationPage from "./components/TripCreationPage.js";

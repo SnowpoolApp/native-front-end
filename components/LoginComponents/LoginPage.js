@@ -1,5 +1,4 @@
 import React from "react";
-import TestButton from "../TestButton.js";
 import { Text, View, StyleSheet, Button, ImageBackground } from "react-native";
 
 // var FBLoginButton = require('../FBLoginButton.js')
