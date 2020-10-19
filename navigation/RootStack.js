@@ -7,7 +7,6 @@ import TripCreationPage from "../components/TripCreationPage.js";
 import { Ionicons } from "@expo/vector-icons";
 import HomePage from "../components/HomePage.js";
 
-
 const HomeStack = createStackNavigator();
 
 const HomeStackScreen = () => (
@@ -23,6 +22,7 @@ const TripStack = createStackNavigator();
 const TripStackScreen = () => (
   <TripStack.Navigator>
     <TripStack.Screen name="Trips" component={TripsSearchPage} />
+    <HomeStack.Screen name="Home" component={HomeStackScreen} />
   </TripStack.Navigator>
 );
 
@@ -74,4 +74,4 @@ const RootStackScreen = () => (
   </RootStack.Navigator>
 );
 
-export { RootStackScreen }
+export { RootStackScreen };
