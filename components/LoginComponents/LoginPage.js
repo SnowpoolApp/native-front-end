@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Button, ImageBackground } from "react-native";
-
-// var FBLoginButton = require('../FBLoginButton.js')
+import FBLoginButton from "../FBLoginButton.js"
 
 import Snowpool from "../../assets/snowpool-background-min.jpg";
 
