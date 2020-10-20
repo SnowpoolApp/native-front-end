@@ -4,6 +4,7 @@ import { faSkiing } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 // var FBLoginButton = require('../FBLoginButton.js')
+import FBLoginButton from "../FBLoginButton.js"
 
 import Snowpool from "../../assets/snowpool-background-min.jpg";
 
