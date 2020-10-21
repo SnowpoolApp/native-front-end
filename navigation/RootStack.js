@@ -8,6 +8,12 @@ import { Ionicons } from "@expo/vector-icons";
 import HomePage from "../components/HomePage.js";
 
 const HomeStack = createStackNavigator();
+// const HomeStackScreen = () => (
+//   <HomeStack.Navigator>
+//     <HomeStack.Screen name="Home" component={HomePage} />
+//     <TripStack.Screen name="Account Page" component={DrawerScreen} />
+//   </HomeStack.Navigator>
+// );
 
 const HomeStackScreen = () => (
   <HomeStack.Navigator>
@@ -30,7 +36,9 @@ const AccountStack = createStackNavigator();
 const AccountStackScreen = () => (
   <AccountStack.Navigator>
     <AccountStack.Screen name="Account Page" component={UserAccountPage} />
-    <HomeStack.Screen name="Home" component={HomeStackScreen} />
+    {/* <HomeStack.Screen name="Home" component={HomeStackScreen} /> */}
+    <AccountStack.Screen name="Trips" component={TripsSearchPage} />
+    <AccountStack.Screen name="Create Trip" component={TripCreationPage} />
   </AccountStack.Navigator>
 );
 
@@ -40,6 +48,7 @@ const DrawerScreen = () => (
     <Drawer.Screen
       name="Home"
       component={HomeStackScreen}
+        // component={HomePage}
       options={{
         drawerIcon: ({ focused, size }) => <Ionicons name="md-home" />,
       }}
@@ -74,4 +83,4 @@ const RootStackScreen = () => (
   </RootStack.Navigator>
 );
 
-export { RootStackScreen };
+export { RootStackScreen, HomeStackScreen };
