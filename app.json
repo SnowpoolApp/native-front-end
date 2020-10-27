@@ -24,6 +24,7 @@
     },
     "facebookScheme": "fb438263017145989",
     "facebookAppId": "438263017145989",
-    "facebookDisplayName": "Snowpool Native"
+    "facebookDisplayName": "Snowpool Native",
+    "facebookAutoInitEnabled": true
   }
 }

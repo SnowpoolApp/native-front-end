@@ -18,16 +18,16 @@ export default function LoginPage({ navigation }) {
                 title="Log in with Facebook"
                 onPress={() => navigation.navigate("Account Page")}
             />
-            {/* <FBLoginButton /> */}
+            <FBLoginButton />
             <Text style={styles.link} onPress={() => console.log("clicked")}>
                 Why Facebook?
             </Text>
         </View>
-        <Text style={styles.demo}>
+        {/* <Text style={styles.demo}>
             We will never post anything without your explicit consent.~{"\n"}
             This is a demo application. By clicking on "Sign In" you agree to our
             Demo Terms on slide 3 →
-        </Text>
+        </Text> */}
         <Text style={styles.text}>Swipe to learn more →</Text>
       </View>
     </ImageBackground>
