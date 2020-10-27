@@ -1,5 +1,9 @@
 import React from "react";
 import { Text, View, StyleSheet, Button, ImageBackground } from "react-native";
+import { faSkiing } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+
+// var FBLoginButton = require('../FBLoginButton.js')
 import FBLoginButton from "../FBLoginButton.js"
 
 import Snowpool from "../../assets/snowpool-background-min.jpg";
@@ -9,7 +13,8 @@ export default function LoginPage({ navigation }) {
     <ImageBackground source={Snowpool} style={styles.image}>
       <View style={styles.parent}>
         <View style={styles.horizontal} >
-            <Text style={styles.title}>Snowpool</Text>
+           
+            <Text style={styles.title}><FontAwesomeIcon size={ 35 } style={styles.icon} icon={ faSkiing } /> Snowpool</Text>
             <Text style={styles.text}> demo</Text>
         </View>
         <Text style={styles.text}>Open Source Carpooling Platform</Text>
@@ -100,5 +105,13 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
     marginBottom: 200,
-  }
+  },
+  icon: {
+    color: '#fff',
+    borderColor: 'black',
+    shadowColor: 'rgba(0, 0, 0, 1)',
+    shadowOffset: {width: -1, height: 1},
+    shadowRadius: 10,
+    alignSelf: 'center',
+    },
 });
